@@ -45,4 +45,5 @@ elif choice == "3":
     print("Converting...")
     fileConverter.convertToMP3(filename)
 else:
-    print("Invalid input! Terminating...")
+    print("Invalid input! Exiting...")
+
