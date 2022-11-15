@@ -1,26 +1,36 @@
-print("Welcome to u2be \nA YouTube Downloader and Converter v0.1")
-print("Loading...")
+print('''
+    ---------------------------------------
+        < Welcome to u2beDownloader >
+    ---------------------------------------
+    A YouTube Downloader and Converter v0.1
+
+''')
+print('''
+    Loading...
+''')
 
 import pytube
 import u2beDownloader
 import fileConverter
 
 print('''
-What do you want?
+    What do you want?
 
-(1) Download a Video
-(2) Download a Playlist
-(3) Download Video and Convert Into MP3
+    (1) Download a Video
+    (2) Download a Playlist
+    (3) Download Video and Convert Into MP3
 
-Copyright (c) Abdull Yahuza 2022
+    Copyright (c) Abdull Yahuza 2022
 ''')
 
 choice = input("Choice: ")
 
 if choice == "1" or choice == "2":
+    print("\t< Video Download >" if choice=="1" else "\t< Playlist Download >")
     quality = input("Please choose a quality (low, medium, high, very high):")
     if choice == "1":
         link = u2beDownloader.inputLink()
+        print("Downloading Video")
         u2beDownloader.downloadVideo(link, quality)
         print("Download finished!")
     if choice == "2":

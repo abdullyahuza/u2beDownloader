@@ -35,12 +35,12 @@ def inputLink():
     return link
 
 def inputLinks():
-    print("Enter the links of the videos (end by entering 'STOP'):")
+    print("Enter the links of the videos (end by entering 'END'):")
 
     links = []
     link = ""
 
-    while link != "STOP" and link != "stop":
+    while link != "END" and link != "end":
         link = input()
         links.append(link)
 
